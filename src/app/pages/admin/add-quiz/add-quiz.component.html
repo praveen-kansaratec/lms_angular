@@ -37,7 +37,7 @@
               <mat-form-field class="w100" appearance="fill">
                 <mat-label>Maximum Marks</mat-label>
                 <input
-                  [(ngModel)]="quizData.maxMarks"
+                  [(ngModel)]="quizData.max_marks"
                   type="text"
                   name="maxMarks"
                   placeholder="Enter here"
@@ -50,7 +50,7 @@
               <mat-form-field class="w100" appearance="fill">
                 <mat-label>Number of Question</mat-label>
                 <input
-                  [(ngModel)]="quizData.numberOfQuestions"
+                  [(ngModel)]="quizData.number_of_questions"
                   type="text"
                   name="numberOfQuestions"
                   placeholder="Enter here"
@@ -62,20 +62,20 @@
 
           <!-- active field   -->
 
-          <mat-slide-toggle
+          <!-- <mat-slide-toggle
             name="active"
             [(ngModel)]="quizData.active"
             class="mt20"
           >
             Publish Status
-          </mat-slide-toggle>
+          </mat-slide-toggle> -->
 
           <br />
           <!-- //category select  -->
           <mat-form-field appearance="fill" class="mt20 w100">
             <mat-label>Categories</mat-label>
-            <mat-select name="category" [(ngModel)]="quizData.category.cid">
-              <mat-option *ngFor="let c of categories" [value]="c.cid">
+            <mat-select name="category" [(ngModel)]="quizData.category.id">
+              <mat-option *ngFor="let c of categories" [value]="c.id">
                 {{ c.title }}
               </mat-option>
             </mat-select>

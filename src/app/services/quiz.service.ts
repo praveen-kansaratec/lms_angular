@@ -18,14 +18,14 @@ export class QuizService {
   }
 
   //delete quiz
-  public deleteQuiz(qId) {
-    return this._http.delete(`${baseUrl}/quiz/${qId}`);
+  public deleteQuiz(id) {
+    return this._http.delete(`${baseUrl}/quiz/${id}`);
   }
 
   //get the single quiz
 
-  public getQuiz(qId) {
-    return this._http.get(`${baseUrl}/quiz/${qId}`);
+  public getQuiz(Id) {
+    return this._http.get(`${baseUrl}/quiz/${Id}`);
   }
 
   //update quiz
@@ -34,8 +34,8 @@ export class QuizService {
   }
 
   //get quizzes of category
-  public getQuizzesOfCategory(cid) {
-    return this._http.get(`${baseUrl}/quiz/category/${cid}`);
+  public getQuizzesOfCategory(id) {
+    return this._http.get(`${baseUrl}/quiz/category/${id}`);
   }
   //qet active quizzes
   public getActiveQuizzes() {

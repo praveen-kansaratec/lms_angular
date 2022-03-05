@@ -1,6 +1,17 @@
-/* .mat-card{
-    background-color:rgb(36, 31, 31) !important;
+.mat-card{
+    /* background-color:rgb(36, 31, 31) !important; */
     padding:5px !important;
+    
+    position: absolute;
+    top: 0;
+    /* bottom: 50px; */
+    left: 0;
+    right: 0;
+    background: rgb(219, 216, 216);
+    /* width: 400px;
+    height: 200px;
+    margin: 10px; */
+    /* border: 1px solid #555; */
   }
   
    .mat-card{
@@ -9,4 +20,9 @@
   
   .mat-card-content{
     padding:0px !important;
-  } */
+  }
+.mat-stroked-button{
+  width: 100%;
+  text-align: left;
+  font-size: larger;
+}

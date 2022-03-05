@@ -7,9 +7,8 @@ import baseUrl from './helper';
 })
 export class QuestionService {
   constructor(private _http: HttpClient) {}
-
-  public getQuestionsOfQuiz(qid) {
-    return this._http.get(`${baseUrl}/question/quiz/all/${qid}`);
+  public getQuestionsOfQuiz(id) {
+    return this._http.get(`${baseUrl}/question/quiz/${id}`);
   }
 
   public getQuestionsOfQuizForTest(qid) {
@@ -21,8 +20,8 @@ export class QuestionService {
     return this._http.post(`${baseUrl}/question/`, question);
   }
   //delete question
-  public deleteQuestion(questionId) {
-    return this._http.delete(`${baseUrl}/question/${questionId}`);
+  public deleteQuestion(id) {
+    return this._http.delete(`${baseUrl}/question/${id}`);
   }
 
   //eval quiz

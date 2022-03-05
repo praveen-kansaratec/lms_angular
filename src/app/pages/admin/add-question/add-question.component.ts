@@ -12,10 +12,10 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class AddQuestionComponent implements OnInit {
   public Editor = ClassicEditor;
-  qId;
+  Id;
   qTitle;
   question = {
-    quiz: {},
+    quizId: 0,
     content: '',
     option1: '',
     option2: '',
@@ -30,9 +30,9 @@ export class AddQuestionComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.qId = this._route.snapshot.params.qid;
+    this.Id = this._route.snapshot.params.qid;
     this.qTitle = this._route.snapshot.params.title;
-    this.question.quiz['qId'] = this.qId;
+    this.question.quizId = Number(this.Id);
   }
 
   formSubmit() {

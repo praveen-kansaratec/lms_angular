@@ -17,17 +17,17 @@ export class UpdateQuizComponent implements OnInit {
     private _router: Router
   ) {}
 
-  qId = 0;
+  quizId = 0;
   quiz;
   categories;
 
   ngOnInit(): void {
-    this.qId = this._route.snapshot.params.qid;
+    this.quizId = this._route.snapshot.params.id;
     // alert(this.qId);
-    this._quiz.getQuiz(this.qId).subscribe(
+    this._quiz.getQuiz(this.quizId).subscribe(
       (data: any) => {
-        this.quiz = data;
-        console.log(this.quiz);
+        this.quiz = data.data;
+        console.log(this.quiz.data);
       },
       (error) => {
         console.log(error);
@@ -47,8 +47,8 @@ export class UpdateQuizComponent implements OnInit {
   //update form submit
   public updateData() {
     //validatate
-
-    this._quiz.updateQuiz(this.quiz).subscribe(
+console.log(this.quizId);
+    this._quiz.updateQuiz(this.quizId).subscribe(
       (data) => {
         Swal.fire('Success !!', 'quiz updated', 'success').then((e) => {
           this._router.navigate(['/admin/quizzes']);

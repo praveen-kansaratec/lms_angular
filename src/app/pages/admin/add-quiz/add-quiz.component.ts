@@ -13,13 +13,14 @@ export class AddQuizComponent implements OnInit {
   categories = [];
 
   quizData = {
+    
     title: '',
     description: '',
-    maxMarks: '',
-    numberOfQuestions: '',
+    max_marks: '',
+    number_of_questions: '',
     active: true,
     category: {
-      cid: '',
+      id: '',
     },
   };
 
@@ -61,11 +62,11 @@ export class AddQuizComponent implements OnInit {
         this.quizData = {
           title: '',
           description: '',
-          maxMarks: '',
-          numberOfQuestions: '',
+          max_marks: '',
+          number_of_questions: '',
           active: true,
           category: {
-            cid: '',
+            id: '',
           },
         };
       },

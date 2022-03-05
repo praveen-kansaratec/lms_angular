@@ -43,6 +43,8 @@ import { StartComponent } from './pages/user/start/start.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { AboutUsComponent } from './pages/user/about-us/about-us.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -84,6 +86,7 @@ import { AboutUsComponent } from './pages/user/about-us/about-us.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
     MatSlideToggleModule,
     MatSelectModule,
     CKEditorModule,

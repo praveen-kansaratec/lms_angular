@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./start.component.css'],
 })
 export class StartComponent implements OnInit {
-  qid;
+  quiz_id;
   questions;
 
   marksGot = 0;
@@ -32,12 +32,12 @@ export class StartComponent implements OnInit {
 
   ngOnInit(): void {
     this.preventBackButton();
-    this.qid = this._route.snapshot.params.qid;
-    console.log(this.qid);
+    this.quiz_id = this._route.snapshot.params.id;
+    console.log(this.quiz_id);
     this.loadQuestions();
   }
   loadQuestions() {
-    this._question.getQuestionsOfQuizForTest(this.qid).subscribe(
+    this._question.getQuestionsOfQuizForTest(this.quiz_id).subscribe(
       (data: any) => {
         this.questions = data;
 

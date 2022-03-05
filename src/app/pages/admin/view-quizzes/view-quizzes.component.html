@@ -7,48 +7,50 @@
   
   <mat-card-header >
     <div mat-card-avatar class="example-header-image"></div>
-    <h3>
+    <h2>
       {{ q.title }}
-    </h3>
-    <!-- <p>{{ q.description }}</p> -->
-    <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
-  <mat-icon mat-list-icon></mat-icon> 
+    </h2>
+
+
+    <div class="example-button-container ml20">
+      <button mat-mini-fab color="primary" [routerLink]="'/admin/view-questions/' + q.id + '/' + q.title">
+        <mat-icon>add circle</mat-icon>
+      </button>
+    </div>
+
+    
   
+
+    <!-- <p>{{ q.description }}</p> -->
+    <!-- <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+  <mat-icon mat-list-icon></mat-icon> 
+   -->
   
   <!-- <mat-card-action> -->
-    <button 
-      [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title"
-      mat-flat-button
+  </mat-card-header>
+  <h3></h3>
+  <mat-card-content>
+
+    <button color="primary"
+      [routerLink]="'/admin/quiz/' + q.id"
+      mat-button
       color="primary"
-    >
-      Questions
-    </button>
-    <button mat-stroked-button color="primary" class="ml20">
-      Max Marks: {{ q.maxMarks }}
-    </button>
-    <button mat-stroked-button color="primary" class="ml20">
-      Questions: {{ q.numberOfQuestions }}
-    </button>
-    <button
-      [routerLink]="'/admin/quiz/' + q.qId"
-      mat-flat-button
-      
       class="ml20"
     >
       Update
@@ -56,19 +58,26 @@
     <!-- <button mat-flat-button color="primary" class="ml20">Attempts</button> -->
 
     <button
-      mat-flat-button
+      mat-button color="warn"
       
-      class="ml10"
-      (click)="deleteQuiz(q.qId)"
+      class="ml10" 
+      (click)="deleteQuiz(q.id)"
     >
       Delete
     </button>
+  
+    <button mat-button class="ml20">
+      Max Marks: {{ q.max_marks }}
+    </button>
+    <button mat-button class="ml20">
+      Questions: {{ q.number_of_questions }}
+    </button>
+    
   <!-- </mat-card-action> -->
     <!-- <mat-card-subtitle>
       {{ q.category.title }}
     </mat-card-subtitle> -->
-  </mat-card-header>
-  <mat-card-content>
+
     
 </mat-card-content>
 </mat-card>
