@@ -8,7 +8,11 @@
   "projects": {
     "examfront": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "css"
+      }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
